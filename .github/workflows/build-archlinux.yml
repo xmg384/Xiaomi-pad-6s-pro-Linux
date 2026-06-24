@@ -91,7 +91,7 @@ jobs:
           # 从 GitHub Release 拉取内核和固件包 
           # 🚨注意：如果你的内核Release标签名变了，请同步修改这里的 "kernel-bundle-${KERNEL_VER}"
           gh release download "kernel-bundle-${KERNEL_VER}" \
-            --repo "${{ github.repository }}" --clobber || true
+            --repo "code002-2/Xiaomi-pad-6s-pro-Linux" --clobber || true
           
           echo "⬇️ 正在下载 Debian Mesa dev 包..."
           wget -q -O mesa-common-dev_26.0.7-1_arm64.deb "http://ftp.br.debian.org/debian/pool/main/m/mesa/mesa-common-dev_26.0.8-1_arm64.deb"
